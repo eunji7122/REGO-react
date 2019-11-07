@@ -35,6 +35,13 @@ class HttpService {
 	}
 
 	getMe() {
+		return axios.get('/me/')
+			.then(response => {
+				return response.data
+			})
+	}
+
+	getPrivateKey() {
 		return axios.get('/me/privateKey/').then(response => {
 			return response.data
 		})
@@ -131,7 +138,7 @@ class HttpService {
 				from: owner,
 				gas: '250000',
 			})
-			.then(function(receipt) {
+			.then(function (receipt) {
 				if (receipt.status) {
 					alert(price + 'KLAY가 [' + owner + '] 계정으로 지급되었습니다.')
 				}
@@ -162,11 +169,36 @@ class HttpService {
 		return axios
 			.post('/items/', formData, {
 				headers: {
-      				'Content-Type': 'multipart/form-data'
-			}})
+					'Content-Type': 'multipart/form-data'
+				}
+			})
 			.then(response => {
 				return response.data
 			})
+	}
+
+	smsService(phone) {
+		return axios
+			.post('/api/auth/', {
+				phone,
+			})
+			.then(response => {
+				return response.data
+			})
+	}
+
+	smsAuth(phone, auth_number) {
+		return axios
+			.get('/api/auth/', {
+				params: {
+					phone: phone,
+					auth_number: auth_number,
+				},
+			})
+			.then(response => {
+				return response.data
+			})
+
 	}
 }
 
