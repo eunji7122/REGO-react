@@ -26,14 +26,16 @@
       font-size: 16pt;
       font-weight: bold;
       color: #333;
-      width: 300px;
+      width: 400px;
+      margin-left: 25px;
       overflow: hidden;
     }
     .number_submit{
+      font-size:small;
       float: right;
     }
     .content{
-      border-top: 1px solid #bebebe;
+      // border-top: 1px solid #bebebe;
       margin-top: 16px;
       p{
         padding: 8px;
@@ -69,5 +71,11 @@
           background-color: #343a40;
         }
       }
+    }
+
+    #leftbox{
+      float:left;
+      border-bottom: 1px solid #bebebe;
+
     }
   }
