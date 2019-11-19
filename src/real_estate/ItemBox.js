@@ -45,7 +45,7 @@ class ItemBox extends React.Component {
 					</div>
 					<div className="card-footer" onClick={this.goToItem}>
 						<Link className="btn btn-primary" to="#">
-							Purchase
+							거래
 						</Link>
 					</div>
 				</div>
