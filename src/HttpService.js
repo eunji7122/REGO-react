@@ -15,7 +15,7 @@ class HttpService {
 		this.refreshSubscribers = []
 		this.isRefreshingToken = false
 
-		axios.defaults.baseURL = 'https://rego-api.jongtaekim.com/'
+		axios.defaults.baseURL = 'https://rego-api.jongtaekim.com'
 		axios.defaults.headers.common['Authorization'] = this.authStore.authToken
 
 		reaction(
