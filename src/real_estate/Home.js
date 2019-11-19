@@ -69,9 +69,6 @@ class Home extends React.Component {
 					<p className="lead">
 						[내 계정 주소] {userAddress}
 					</p>
-					<a href="#" className="btn btn-primary btn-lg">
-						Detail BlockChain
-					</a>
 				</header>
 				<div className="row text-center">{items}</div>
 			</div>

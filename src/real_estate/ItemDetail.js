@@ -76,12 +76,13 @@ class ItemDetail extends React.Component {
 			if (response.result == true) {
 				alert('인증에 성공하였습니다. 잠시 후 구매가 완료됩니다.')
 				this.props.httpService.purchaseItem(item).then(result => {
+					alert('구입을 완료했습니다.')
 					console.log(result)
+					this.props.history.push('/')
 				})
 				this.setState({
 					isPurchased: true,
 				})
-				this.props.history.push('/')
 			} else {
 				alert('인증에 실패하였습니다.')
 			}
@@ -134,9 +135,6 @@ class ItemDetail extends React.Component {
 
 		return (
 			<div>
-				<div className="divex">
-					<button onClick={this.createItem}>임대인등록</button>
-				</div>
 				<section className="section">
 					<div className="container">
 						<div className="row">
