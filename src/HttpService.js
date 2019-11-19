@@ -15,7 +15,7 @@ class HttpService {
 		this.refreshSubscribers = []
 		this.isRefreshingToken = false
 
-		axios.defaults.baseURL = 'http://localhost:8000'
+		axios.defaults.baseURL = 'http://13.124.242.206:10000'
 		axios.defaults.headers.common['Authorization'] = this.authStore.authToken
 
 		reaction(
